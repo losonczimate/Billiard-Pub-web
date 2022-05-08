@@ -14,8 +14,8 @@
             <mat-card-actions>
                 <form [formGroup]="commentsForm" (ngSubmit)="addComment()">
                     <div>
-                        <mat-form-field>
-                            <mat-label for="username">Felhasználó: </mat-label>
+                        <mat-form-field> 
+                            <mat-label for="username">Felhasználó: </mat-label> 
                             <input matInput type="text" formControlName="username" />
                         </mat-form-field>
                     </div>
@@ -23,7 +23,7 @@
                         <mat-form-field>
                             <mat-label for="idopont">Foglalható időpontok: </mat-label>
                             <mat-select placeholder="Foglalható időpontok" formControlName="idopont">
-                                <mat-option [value]="" *ngFor="let idopont of newdate">{{appointment.idopont}}</mat-option>
+                                <mat-option [value]="appointment.idopont" *ngFor="let ido of appointment">{{appointment.idopont}}</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
@@ -44,7 +44,7 @@
             <tr>
                 <th>Szabad időpontok</th>
             </tr>
-            <tr *ngFor="let appointment of newdate; let i = index;"
+            <tr *ngFor="let appointment of newappointment; let i = index;"
                 [ngStyle]="{'background-color' : i % 2 === 0 ? 'darkcyan' : 'cyan'}">
                 <td>{{appointment.foglalasDatum | dateFormat}}</td>
             </tr>
