@@ -21,9 +21,9 @@
                     </div>
                     <div>
                         <mat-form-field>
-                            <mat-label for="appointment">Foglalható időpontok: </mat-label>
-                            <mat-select placeholder="Foglalható időpontok" formControlName="appointment">
-                                <mat-option [value]="" *ngFor="let ido of newdate">{{appointment.foglalasDatum}}</mat-option>
+                            <mat-label for="comment">Foglalható időpontok: </mat-label>
+                            <mat-select placeholder="Foglalható időpontok" formControlName="comment">
+                                <mat-option [value]="appointment.foglalasDatum" *ngFor="let appointment of newdate">{{appointment.foglalasDatum}}</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>

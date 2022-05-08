@@ -61,14 +61,14 @@ export class ViewerComponent implements OnInit, OnChanges {
   createForm(model: Comment) {
     let formGroup = this.fb.group(model);
     formGroup.get('username')?.addValidators([Validators.required]);
-    formGroup.get('appointment')?.addValidators([Validators.required]);
+    formGroup.get('comment')?.addValidators([Validators.required]);
     return formGroup;
   }
 
   addComment() {
     if (this.commentsForm.valid) {
       if (this.imageInput?.id) {
-        this.appointmentService.bookanAppointment(this.commentsForm.get("appointment")?.value,this.imageInput?.id).then(_ => {
+        this.appointmentService.bookanAppointment(this.commentsForm.get("comment")?.value,this.imageInput?.id).then(_ => {
           this.router.navigateByUrl('/gallery/successful/' + this.commentsForm.get('username')?.value);
         }).catch(error => {
           console.error(error);
