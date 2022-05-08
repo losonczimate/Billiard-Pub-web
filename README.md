@@ -12,5 +12,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 #elerheto meg
-https://billiard-pub-webkeret2022.web.app 
+https://billiard-pub-webkeret2022.web.app
 
