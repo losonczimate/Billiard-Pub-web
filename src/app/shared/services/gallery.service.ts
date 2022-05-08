@@ -11,24 +11,16 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 })
 export class GalleryService {
 
-  // HTTP
-
   collectionName = 'Images';
-
   constructor(
     private http: HttpClient,
     private afs: AngularFirestore,
     private storage: AngularFireStorage    
     ) { }
-
   loadImageMeta(metaUrl: string): Observable<Array<Image>> {
-    // return this.http.get(environment.hostUrl + '/assets/' + metaUrl) as Observable<Array<Image>>;
     return this.afs.collection<Image>(this.collectionName).valueChanges();
   }
-
   loadImage(imageUrl: string) {
-    // return this.http.get(environment.hostUrl + '/assets/' + imageUrl, {responseType: 'blob'});
     return this.storage.ref(imageUrl).getDownloadURL();
-
   }
 }

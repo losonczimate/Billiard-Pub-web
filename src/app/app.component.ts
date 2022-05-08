@@ -18,10 +18,6 @@ export class AppComponent implements OnInit {
   routes: Array<string> = [];
   loggedInUser?: firebase.default.User | null;
   cimke: any;
-  /* router: Router;
-  constructor(router: Router) {
-    this.router = router;
-  } */
 
   constructor(private galleryService:GalleryService ,private router: Router, private authService: AuthService) {
     
