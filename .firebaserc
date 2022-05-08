@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "billiard-pub-webkeret2022"
+  },
+  "targets": {
+    "billiard-pub-webkeret2022": {
+      "hosting": {
+        "billiardpub": [
+          "billiard-pub-webkeret2022"
+        ]
+      }
+    }
+  }
+}
