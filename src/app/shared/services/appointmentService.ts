@@ -26,8 +26,8 @@ export class appointmentService {
   }
 
   bookanAppointment(idopont: string, asztal: string){
-    this.newdate= {"foglalasDatum":idopont, "foglalte":true, "asztalid":asztal};
-    return this.afs.collection<Appointment>(this.collectionName).doc(asztal + idopont).set(this.newdate);
+    this.newdate= {"foglalasDatum":idopont, "foglalte":true, "id":asztal};
+    return this.afs.collection<Appointment>(this.collectionName).doc().set(this.newdate);
   
   }
 }

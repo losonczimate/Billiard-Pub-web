@@ -21,7 +21,7 @@ export class ViewerComponent implements OnInit, OnChanges {
   loadedImage?: string;
   user?: User;
   appointment?: any = ["teszt","teszt2"];
-  newappointment: Array<Appointment> = [];
+  newdate: Array<Appointment> = [];
 
   commentsForm = this.createForm({
     id: '',
@@ -44,7 +44,7 @@ export class ViewerComponent implements OnInit, OnChanges {
         this.loadedImage = data;
       });
       this.appointmentService.getOpenDates(this.imageInput.id).subscribe(appointment => {this.appointment = appointment;});
-      this.appointmentService.getDates(this.imageInput.id).subscribe(appointments =>{this.newappointment = appointments})
+      this.appointmentService.getDates(this.imageInput.id).subscribe(appointments =>{this.newdate = appointments})
     }
   }
 
