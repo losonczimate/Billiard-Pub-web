@@ -25,9 +25,9 @@ export class appointmentService {
     return this.afs.collection<Appointment>(this.collectionName, ref => ref.where('foglalte', '==', false).where("id", "==", asztal)).valueChanges();
   }
 
-  bookanAppointment(idopont: string, asztal: string){
-    this.newdate= {"foglalasDatum":idopont, "foglalte":true, "id":asztal};
-    return this.afs.collection<Appointment>(this.collectionName).doc().set(this.newdate);
+  bookanAppointment(ido: string, asztal: string){
+    this.newdate= {"foglalasDatum":ido, "foglalte":true, "id":asztal};
+    return this.afs.collection<Appointment>(this.collectionName).doc(asztal+ " " + ido).update(this.newdate);
   
   }
 }
