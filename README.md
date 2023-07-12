@@ -12,3 +12,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 A hostolt oldal, nem jó elsőre. Ismeretlen okból, minden egyezik. Beregisztrálunk, bejelentkezünk és újranyitjuk a linket, ekkor már látható minden.
 
+## Deployolt oldal
+https://billiard-pub-webkeret2022.web.app/signup
+
